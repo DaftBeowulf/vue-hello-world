@@ -11,15 +11,15 @@
 
 <script>
 export default {
+  props: {
+    hobbits: {
+      type: Array,
+      required: true
+    }
+  },
   name: "app",
   data() {
-    return {
-      hobbits: [
-        { name: "Samwise", specialty: "true hero", show: false },
-        { name: "Frodo", specialty: "dead weight", show: false },
-        { name: "Bilbo", specialty: "smoking leaves", show: false }
-      ]
-    };
+    return {};
   },
   components: {}
 };

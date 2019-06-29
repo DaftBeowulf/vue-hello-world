@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header />
-    <hobbits></hobbits>
+    <hobbits v-bind:hobbits="hobbits"></hobbits>
     <app-footer />
   </div>
 </template>
@@ -15,7 +15,13 @@ import Footer from "./components/Footer";
 export default {
   name: "app",
   data() {
-    return {};
+    return {
+      hobbits: [
+        { name: "Samwise", specialty: "true hero", show: false },
+        { name: "Frodo", specialty: "dead weight", show: false },
+        { name: "Bilbo", specialty: "smoking leaves", show: false }
+      ]
+    };
   },
   components: {
     hobbits: Hobbits,
