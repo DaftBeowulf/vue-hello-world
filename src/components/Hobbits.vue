@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <h1>{{title}}</h1>
-    <hobbits></hobbits>
-  </div>
+  <ul>
+    <li v-for="(hobbit, i) in hobbits" v-bind:key="i">Hobbit #{{i+1}}: {{hobbit}}</li>
+  </ul>
 </template>
 
 <script>
@@ -10,7 +9,7 @@ export default {
   name: "app",
   data() {
     return {
-      title: "Hobbit app"
+      hobbits: ["Samwise", "Frodo", "Bilbo"]
     };
   },
   components: {}
