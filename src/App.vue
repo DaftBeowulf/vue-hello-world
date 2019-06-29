@@ -6,6 +6,9 @@
 </template>
 
 <script>
+// registered locally--only usable in this app
+import Hobbits from "./components/Hobbits";
+
 export default {
   name: "app",
   data() {
@@ -13,9 +16,14 @@ export default {
       title: "Hobbit app"
     };
   },
-  components: {}
+  components: {
+    hobbits: Hobbits
+  }
 };
 </script>
 
-<style>
+<style scoped>
+h1 {
+  color: purple;
+}
 </style>
